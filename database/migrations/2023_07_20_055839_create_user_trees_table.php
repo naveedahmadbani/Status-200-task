@@ -15,10 +15,6 @@ class CreateUserTreesTable extends Migration
     {
         Schema::create('user_trees', function (Blueprint $table) {
             $table->integer('id');
-            $table->integer('parent_id');
-            $table->string('name');
-            $table->integer('age');
-            $table->string('veteran');
             $table->timestamps();
         });
     }
