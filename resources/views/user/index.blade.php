@@ -29,9 +29,6 @@
                                             <th scope="col">#</th>
                                             <th scope="col">User Name</th>
                                             <th scope="col">Email</th>
-                                            <th scope="col">Assign Lead</th>
-                                            <th scope="col">Role</th>
-                                            <th scope="col">Status</th>
                                             <th scope="col">Action</th>
                                         </tr>
                                     </thead>
@@ -41,13 +38,12 @@
                                             @foreach($users as $user)
                                                 <tr>
                                                     <th scope="row">{{$i}}</th>
-                                                    <td>{{ucfirst($user->name)}}</td>
+                                                    <!-- <td>{{ucfirst($user->name)}}</td> -->
                                                     <td>{{$user->email}}</td>
                                                     <td>{{$user->leads}}</td>
                                                     <td>{{ucfirst($user->role)}}</td>
                                                     <td>{{$user->status}}</td>
                                                     <td>
-                                                        <a type="button" class="btn btn-primary" href="{{route('user.edit',$user->id)}}">Edit</a>
                                                         <a type="button" href="{{route('user.delete',$user->id)}}" class="btn btn-danger"
                                                         onclick="return confirm('Are you sure you want to delete this item?')">Delete</a>
                                                     </td>
